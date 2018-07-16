@@ -19,6 +19,9 @@
 	color: #666
 	opacity: 1
 
+*
+	box-sizing: border-box
+
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
 	color: #666
@@ -331,9 +334,21 @@ a
 				margin-top: 13px
 
 .section-3
+
+.section-form
 	background-color: $blue
 	padding-top: 25px
 	padding-bottom: 28px
+	position: relative
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		background-color: $gray
+		width: 52px
+		height: 163px
+		left: calc(50% - 848px)
+		bottom: -40px
 	.box
 		flex-direction: column
 	h2
@@ -398,24 +413,188 @@ a
 
 .section-4
 	overflow: hidden
-	.box
-	
+	padding-top: 75px
+	padding-bottom: 85px
 	.left
-		width: 50%
+		width: 60%
 		position: relative
 		.img-wrap
 			position: relative
 			height: 573px
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				background-color: $blue
+				width: 163px
+				height: 52px
+				bottom: -35px
+				right: -54px
 			img
 				position: absolute
 				right: 0
 				top: 0
 	.right
-		width: 50%
+		width: 40%
 		margin: 0 auto
 		text-align: center
+		padding-top: 160px
+		padding-right: 45px
 		h2
 			color: $blue
+			font-family: $BoldAlt
+			font-size: 45px
+			text-transform: uppercase
+			letter-spacing: 15px
+			margin: 0
+		p
+			margin: 0
+			font-size: 15px
+			line-height: 17px
+			padding-top: 30px
+
+.section-5
+	overflow: hidden
+	.title
+		background-color: #4f4942
+		color: #fff
+		margin-left: 250px
+		padding-top: 22px
+		padding-bottom: 24px
+		h2
+			font-size: 47px
+			font-family: $RegularCaps
+			text-transform: uppercase
+			line-height: 40px
+			max-width: 620px
+			text-align: center
+			font-weight: normal
+			margin: 0
+			letter-spacing: 12px
+			span
+				font-family: $LightCaps
+				letter-spacing: 3px
+				font-size: 37px
+	.wrapper-bg
+		background-image: url(../img/4-bg.jpg)
+		background-size: cover
+		background-position: center
+		padding-top: 115px
+		padding-bottom: 182px
+		.box
+			justify-content: space-between
+		.item
+			width: calc(30% - 20px)
+			position: relative
+			.white
+				background-color: #fff
+				padding: 18px
+				padding-bottom: 100px
+				position: relative
+			h3
+				margin: 0
+				font-family: $RegularCaps
+				font-size: 27px
+				font-weight: normal
+			ul
+				margin: 0
+				padding: 0
+				padding-top: 22px
+				li
+					list-style-type: none
+					font-size: 16px
+					line-height: 24px
+					text-transform: uppercase
+			&1
+				text-align: right
+				.white
+					&::before
+						content: ''
+						display: block
+						position: absolute
+						top: 0
+						bottom: 0
+						left: -1000%
+						width: 1000%
+						background-color: #fff
+			&2
+				text-align: center
+				width: calc(40% - 20px)
+			&3
+				text-align: left
+				.white
+					&::before
+						content: ''
+						display: block
+						position: absolute
+						top: 0
+						bottom: 0
+						right: -1000%
+						width: 1000%
+						background-color: #fff
+			a
+				display: inline-block
+				line-height: 57px
+				text-align: center
+				color: #fff
+				text-decoration: none
+				font-family: $LightCaps
+				font-size: 27px
+				background-color: transparent
+				margin-top: 25px
+				padding: 0 60px
+				position: relative
+				span
+					z-index: 1
+					position: relative
+				&::after
+					content: ''
+					display: block
+					position: absolute
+					top: 0
+					bottom: 0
+					right: 0
+					left: 0
+					background-color: $blue
+					opacity: .75
+					transition: .3s ease-in-out
+				&:hover
+					color: $blue
+					&::after
+						opacity: 1
+						background-color: #fff
+					
+.section-6
+	margin-top: 85px
+	padding: 10px 0
+	padding-bottom: 60px
+	&.section-form
+		.form-wrap
+			padding-top: 12px
+		h2
+			display: inline-block
+			text-align: left
+		.zvonok
+			color: #fff
+			float: right
+			font-family: $LightAlt
+			font-size: 29px
+			position: relative
+			bottom: -7px
+	&::after
+		width: 163px
+		height: 52px
+		left: calc(50% - 379px)
+		bottom: -17px
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		background-color: #4f4942
+		width: 163px
+		height: 52px
+		left: calc(50% - 82px)
+		top: -12px
 
 
 
@@ -446,12 +625,6 @@ a
 
 
 
-
-
-
-
-
-			
 
 
 @import "media" // Всегда в конце
