@@ -66,9 +66,6 @@ a
 	display: flex
 	flex-wrap: wrap
 
-.transition
-	transition: .3s easy-in-out
-
 
 
 
@@ -80,7 +77,7 @@ a
 		justify-content: space-between
 	.logo-wrap
 		padding-top: 15px
-		padding-left: 78px
+		padding-left: 69px
 		a
 			img
 				display: block
@@ -89,7 +86,7 @@ a
 				height: 100%
 	.menu-wrap
 		padding-top: 45px
-		padding-left: 50px
+		padding-left: 30px
 		ul
 			padding: 0
 			margin: 0
@@ -158,13 +155,13 @@ a
 		right: 0
 		height: 100%
 		width: 123px
-		width: 5.5%
+		width: 6%
 	.left
 		background-color: #fff
 		position: relative
 		z-index: 3
 		padding-top: 186px
-		width: calc(52% - 21px)
+		width: calc(51% - 21px)
 		margin-right: 21px
 		&::before
 			content: ''
@@ -223,10 +220,14 @@ a
 	.right
 		position: relative
 		z-index: 2
-		width: 48%
-		img
-			height: 100%
-			display: block
+		width: 49%
+		.img-wrap
+			width: 938px
+			height: 691px
+			img
+				height: 100%
+				display: block
+				object-fit: cover
 
 .section-2
 	padding-top: 33px
@@ -239,7 +240,7 @@ a
 		height: 163px
 		background-color: $blue
 		top: -90px
-		left: calc(50% + 600px)
+		left: calc(50% + 587px)
 	h2
 		text-align: center
 		color: $blue
@@ -329,16 +330,128 @@ a
 				font-family: $Book
 				margin-top: 13px
 
+.section-3
+	background-color: $blue
+	padding-top: 25px
+	padding-bottom: 28px
+	.box
+		flex-direction: column
+	h2
+		text-align: center
+		color: #fff
+		margin: 0
+		font-family: $RegularCaps
+		font-size: 30px
+	.form-wrap
+		padding-top: 27px
+		form
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			width: 100%
+			span
+				display: block
+				width: calc(33.333% - 12px)
+				input:not([type="submit"])
+					border: 1px solid #fff
+					text-align: center
+					background-color: transparent
+					line-height: 55px
+					color: #fff
+					width: 100%
+					font-size: 20px
+					&::-webkit-input-placeholder
+						color: #fff
+						font-family: $LightCaps
+						font-weight: 300
+					&::-webkit-input-placeholder
+						color: #fff
+						font-family: $LightCaps
+						font-weight: 300
+					&:-moz-placeholder
+						color: #fff
+						font-family: $LightCaps
+						font-weight: 300
+					&::-moz-placeholder
+						color: #fff
+						font-family: $LightCaps
+						font-weight: 300
+					&:-ms-input-placeholder
+						color: #fff
+						font-family: $LightCaps
+						font-weight: 300
+				input[type="submit"]
+					background-color: #fff
+					border: none
+					text-align: center
+					line-height: 55px
+					width: 100%
+					cursor: pointer
+					font-family: $RegularCaps
+					text-transform: uppercase
+					color: $gray
+					font-size: 20px
+					transition: .3s ease-in-out
+					&:hover
+						background-color: $gray
+						color: #fff
+
+.section-4
+	overflow: hidden
+	.box
+	
+	.left
+		width: 50%
+		position: relative
+		.img-wrap
+			position: relative
+			height: 573px
+			img
+				position: absolute
+				right: 0
+				top: 0
+	.right
+		width: 50%
+		margin: 0 auto
+		text-align: center
+		h2
+			color: $blue
 
 
 
 
-/* dsad */
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
 
 
 @import "media" // Всегда в конце
