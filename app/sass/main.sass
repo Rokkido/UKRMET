@@ -1,4 +1,5 @@
 @import "normalize"
+@import "../libs/wow/animate"
 @import "fonts"
 @import "libs"
 @import "vars"
@@ -41,6 +42,7 @@ body
 	overflow-x: hidden
 	opacity: 1
 	color: #000
+	padding-top: 193px
 *
 	outline: none
 a
@@ -76,6 +78,14 @@ a
 
 .main-header
 	padding-bottom: 10px
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	width: 100%
+	z-index: 99
+	background-color: #fff
+	box-shadow: 0px -1px 20px 0px rgba(0, 0, 0, 0.3)
 	.box
 		justify-content: space-between
 	.logo-wrap
@@ -456,7 +466,7 @@ a
 .section-5
 	overflow: hidden
 	.title
-		background-color: #4f4942
+		background-color: $gray
 		color: #fff
 		margin-left: 250px
 		padding-top: 22px
@@ -568,6 +578,7 @@ a
 	margin-top: 85px
 	padding: 10px 0
 	padding-bottom: 60px
+	margin-bottom: 95px
 	&.section-form
 		.form-wrap
 			padding-top: 12px
@@ -596,17 +607,179 @@ a
 		left: calc(50% - 82px)
 		top: -12px
 
+.section-7
+	background-image: url(../img/5-bg.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	padding-top: 35px
+	padding-bottom: 102px
+	position: relative
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		width: 52px
+		height: 163px
+		background-color: $blue
+		bottom: 102px
+		left: calc(50% - 848px)
+	h2
+		text-align: center
+		font-family: $Book
+		font-weight: normal
+		font-size: 48px
+		text-transform: uppercase
+		color: $blue
+		margin: 0
+		span
+			font-family: $RegularCaps
+			font-weight: bold
+			text-transform: uppercase
+	.items-wrap
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin-top: 80px
+		max-width: 1500px
+		margin-left: auto
+		margin-right: auto
+		.item
+			width: 25%
+			text-align: center
+			position: relative
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				top: 110px
+				right: -15px
+				background-image: url(../img/5-arrow.png)
+				width: 32px
+				height: 53px
+			&:last-child::after
+				display: none
+			.img-wrap
+				max-width: 300px
+				height: 300px
+				border-radius: 50%
+				border: 3px solid $blue
+				position: relative
+				margin: 0 auto
+				img
+					max-width: 100%
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					border-radius: 50%
+			p
+				max-width: 250px
+				margin: 0 auto
+				text-transform: uppercase
+				font-size: 15px
+				line-height: 25px
+				margin-top: 35px
+	.btn-wrap
+		text-align: center
+		margin-top: 55px
+		a
+			display: inline-block
+			text-decoration: none
+			line-height: 57px
+			font-size: 20px
+			background-color: $blue
+			color: #fff
+			font-family: $RegularCaps
+			text-transform: uppercase
+			transition: .3s ease-in-out
+			padding: 0 100px
+			&:hover
+				color: $blue
+				background-color: #fff
 
+.section-8
+	padding-top: 85px
+	padding-bottom: 130px
+	overflow: hidden
+	.left
+		width: 25%
+		h2
+			font-weight: normal
+			font-family: $RegularCaps
+			font-size: 48px
+			color: $blue
+			margin: 0
+			text-align: center
+		.contact-wrap
+			font-family: $Book
+			background-color: $blue
+			color: #fff
+			font-size: 23px
+			position: relative
+			padding-top: 55px
+			padding-left: 100px
+			padding-bottom: 175px
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				bottom: 20px
+				left: -50px
+				width: 163px
+				height: 52px
+				background-color: $gray
+			.address
+				margin-bottom: 28px
+			ul
+				margin: 0
+				padding: 0
+				li
+					list-style-type: none
+					line-height: 1.4
+					a
+						font-size: 23px
+						color: #fff
+						text-decoration: none
+						transition: .3s ease-in-out
+						&:hover
+							opacity: .8
+	.right
+		width: 75%
+		padding-top: 25px
+		position: relative
+		z-index: 2
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			bottom: -40px
+			left: 265px
+			height: 146px
+			background-color: $gray
+			width: 1000%
+			z-index: -1
+		#map
+			height: 682px
+			width: 100%
+			
 
-
-
-
-
-
-
-
-
-
+.section-9
+	margin-top: 0
+	margin-bottom: 150px
+	padding-top: 32px
+	padding-bottom: 35px
+	&.section-6::after
+		display: none
+	&.section-6::before
+		content: ''
+		display: block
+		position: absolute
+		background-color: #4f4942
+		width: 52px
+		height: 163px
+		left: calc(50% - -778px)
+		top: auto
+		bottom: -90px
 
 
 
