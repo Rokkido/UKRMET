@@ -1,5 +1,6 @@
 @import "normalize"
 @import "../libs/wow/animate"
+@import "../libs/mpp/magnific-popup"
 @import "fonts"
 @import "libs"
 @import "vars"
@@ -43,6 +44,8 @@ body
 	opacity: 1
 	color: #000
 	padding-top: 193px
+	&.overflow-hidden
+		overflow: hidden
 *
 	outline: none
 a
@@ -58,6 +61,9 @@ a
 	max-width: 100%
 	height: auto
 	display: inline-block
+
+.hidden
+	display: none
 
 .container
 	width: 100%
@@ -781,6 +787,113 @@ a
 		top: auto
 		bottom: -90px
 
+.popup-form
+	max-width: 735px
+	margin: 0 auto
+	padding: 50px 100px
+	background-color: #fff
+	position: relative
+	box-shadow: -7.69px 2.205px 27.26px 1.74px rgba(34, 34, 34, 0.68)
+	h2
+		font-weight: normal
+		text-transform: uppercase
+		font-family: $LightAlt
+		font-size: 44px
+		line-height: 50px
+	span
+		width: 100%
+		display: block
+		text-align: center
+		input:not([type="submit"])
+			width: 100%
+			border: 2px solid $blue
+			line-height: 76px
+			margin-bottom: 25px
+			text-align: center
+			color: #000
+			font-size: 30px
+			&::-webkit-input-placeholder
+				color: #000
+				font-family: $LightAlt
+				font-weight: 300
+			&::-webkit-input-placeholder
+				color: #000
+				font-family: $LightAlt
+				font-weight: 300
+			&:-moz-placeholder
+				color: #000
+				font-family: $LightAlt
+				font-weight: 300
+			&::-moz-placeholder
+				color: #000
+				font-family: $LightAlt
+				font-weight: 300
+			&:-ms-input-placeholder
+				color: #000
+				font-family: $LightAlt
+				font-weight: 300
+		input[type="submit"]
+			line-height: 76px
+			border: none
+			background-color: $blue
+			color: #fff
+			width: 100%
+			font-family: $BoldCaps
+			text-transform: uppercase
+			font-size: 40px
+			cursor: pointer
+			transition: .3s ease-in-out
+			border: 2px solid transparent
+			&:hover
+				color: $blue
+				background-color: #fff
+				border-color: $blue
+	.mfp-close
+		background-image: url(../img/popup-close-btn-black.png)
+		width: 32px
+		height: 32px
+		background-repeat: no-repeat
+		font-size: 0
+		opacity: 1
+		transition: .3s ease-in-out
+		top: 25px
+		right: 15px
+		&:hover
+			opacity: .6
+
+.popup-form.form-sale
+	background-color: $gray
+	.title
+		font-size: 26px
+		line-height: 33px
+		font-family: $LightAlt
+		color: #fff
+		text-transform: uppercase
+		text-align: center
+	h2
+		font-family: $BoldCaps
+		font-size: 54px
+		line-height: 62px
+		color: #fff
+		text-align: center
+		margin: 10px 0
+		span
+			font-size: 40px
+	.mfp-close
+		background-image: url(../img/popup-close-btn-white.png)
+	input:not([type="submit"])
+		border-color: transparent
+		color: $blue
+		&::-webkit-input-placeholder
+			color: $blue
+		&::-webkit-input-placeholder
+			color: $blue
+		&:-moz-placeholder
+			color: $blue
+		&::-moz-placeholder
+			color: $blue
+		&:-ms-input-placeholder
+			color: $blue
 
 
 
@@ -799,5 +912,76 @@ a
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mfp-bg
+	background-color: #fff
+
+.mfp-zoom-in
+	.mfp-with-anim
+		opacity: 0
+		transition: all 0.2s ease-in-out
+		transform: scale(0.8)
+	&.mfp-bg
+		opacity: 0
+		transition: all 0.3s ease-out
+	&.mfp-ready
+		.mfp-with-anim
+			opacity: 1
+			transform: scale(1)
+		&.mfp-bg
+			opacity: 0.8
+	&.mfp-removing
+		.mfp-with-anim
+			transform: scale(0.8)
+			opacity: 0
+		&.mfp-bg
+			opacity: 0
+
+.mfp-with-fade
+	.mfp-content
+	&.mfp-bg
+		opacity: 0
+		transition: opacity .5s ease-out
+	&.mfp-ready
+		.mfp-content
+			opacity: 1;
+		&.mfp-bg
+			opacity: 0.8
+	&.mfp-removing 
+		&.mfp-bg
+			opacity: 0
 
 @import "media" // Всегда в конце
