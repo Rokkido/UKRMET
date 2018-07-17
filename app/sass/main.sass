@@ -98,6 +98,8 @@ a
 		padding-top: 15px
 		padding-left: 69px
 		a
+			width: 125px
+			display: block
 			img
 				display: block
 				width: 100%
@@ -236,6 +238,7 @@ a
 						font-size: 15px
 						line-height: 28px
 						text-transform: uppercase
+						list-style-type: none
 	.right
 		position: relative
 		z-index: 2
@@ -247,6 +250,8 @@ a
 				height: 100%
 				display: block
 				object-fit: cover
+			div
+				height: 100%
 
 .section-2
 	padding-top: 33px
@@ -279,6 +284,7 @@ a
 	.wrapper-bg
 		background-image: url(../img/2-bg.jpg)
 		padding-bottom: 25px
+		background-size: cover
 	.items-wrap
 		display: flex
 		flex-wrap: wrap
@@ -391,6 +397,7 @@ a
 					color: #fff
 					width: 100%
 					font-size: 20px
+					height: 57px
 					&::-webkit-input-placeholder
 						color: #fff
 						font-family: $LightCaps
@@ -502,11 +509,17 @@ a
 		.item
 			width: calc(30% - 20px)
 			position: relative
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			flex-direction: column
+			justify-content: space-between
 			.white
 				background-color: #fff
 				padding: 18px
 				padding-bottom: 100px
 				position: relative
+				width: 100%
 			h3
 				margin: 0
 				font-family: $RegularCaps
@@ -533,9 +546,13 @@ a
 						left: -1000%
 						width: 1000%
 						background-color: #fff
+				a
+					margin-left: auto
 			&2
 				text-align: center
 				width: calc(40% - 20px)
+				a
+					margin: 0 auto
 			&3
 				text-align: left
 				.white
@@ -548,6 +565,8 @@ a
 						right: -1000%
 						width: 1000%
 						background-color: #fff
+				a
+					margin-right: auto
 			a
 				display: inline-block
 				line-height: 57px
@@ -597,7 +616,7 @@ a
 			font-family: $LightAlt
 			font-size: 29px
 			position: relative
-			bottom: -7px
+			bottom: -5px
 	&::after
 		width: 163px
 		height: 52px
@@ -663,7 +682,7 @@ a
 				width: 32px
 				height: 53px
 			&:last-child::after
-				display: none
+				opacity: 0
 			.img-wrap
 				max-width: 300px
 				height: 300px
@@ -800,6 +819,7 @@ a
 		font-family: $LightAlt
 		font-size: 44px
 		line-height: 50px
+		text-align: center
 	span
 		width: 100%
 		display: block
@@ -808,6 +828,7 @@ a
 			width: 100%
 			border: 2px solid $blue
 			line-height: 76px
+			height: 78px
 			margin-bottom: 25px
 			text-align: center
 			color: #000
@@ -895,6 +916,10 @@ a
 		&:-ms-input-placeholder
 			color: $blue
 
+.main-header .menu-btn-wrap
+	display: none
+	position: relative
+	z-index: 99
 
 
 
@@ -943,9 +968,7 @@ a
 
 
 
-
-
-
+// Popup fade
 .mfp-bg
 	background-color: #fff
 
@@ -977,11 +1000,82 @@ a
 		transition: opacity .5s ease-out
 	&.mfp-ready
 		.mfp-content
-			opacity: 1;
+			opacity: 1
 		&.mfp-bg
 			opacity: 0.8
 	&.mfp-removing 
 		&.mfp-bg
 			opacity: 0
+
+
+
+
+// Mobile Menu Button
+.open-menu
+	width: 60px;
+	height: 45px
+	position: relative
+	transform: rotate(0deg)
+	transition: .5s ease-in-out
+	cursor: pointer
+	&.open span
+		background: #fff
+.open-menu span
+	display: block
+	position: absolute
+	height: 9px
+	width: 50%
+	background: $blue
+	opacity: 1
+	transform: rotate(0deg)
+	transition: .25s ease-in-out
+
+
+.open-menu span:nth-child(even)
+	left: 50%
+	border-radius: 0 9px 9px 0
+
+.open-menu span:nth-child(odd)
+	left: 0px
+	border-radius: 9px 0 0 9px
+
+.open-menu span:nth-child(1), .open-menu span:nth-child(2)
+	top: 0px
+
+.open-menu span:nth-child(3), .open-menu span:nth-child(4)
+	top: 18px
+
+.open-menu span:nth-child(5), .open-menu span:nth-child(6)
+	top: 36px
+
+.open-menu.open span:nth-child(1), .open-menu.open span:nth-child(6)
+	transform: rotate(45deg)
+
+.open-menu.open span:nth-child(2), .open-menu.open span:nth-child(5)
+	transform: rotate(-45deg)
+
+.open-menu.open span:nth-child(1)
+	left: 5px
+	top: 7px
+
+.open-menu.open span:nth-child(2)
+	left: calc(50% - 5px)
+	top: 7px
+
+.open-menu.open span:nth-child(3)
+	left: -50%
+	opacity: 0
+
+.open-menu.open span:nth-child(4)
+	left: 100%
+	opacity: 0
+
+.open-menu.open span:nth-child(5)
+	left: 5px
+	top: 29px
+
+.open-menu.open span:nth-child(6)
+	left: calc(50% - 5px)
+	top: 29px
 
 @import "media" // Всегда в конце

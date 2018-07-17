@@ -47,6 +47,19 @@
 	<header class="main-header animated fadeInDown">
 		<div class="container">
 			<div class="box">
+
+				<div class="menu-btn-wrap">
+					
+					<div class="open-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+
+				</div>
 				
 				<div class="logo-wrap">
 					<a href="/">
@@ -300,7 +313,6 @@
 				</div>
 			</div>
 		</div>
-
 	</section>
 
 	<section class="section-6 section-form" id="sec6">
@@ -392,7 +404,7 @@
 			</div>
 
 			<div class="btn-wrap">
-				<a class="mpp" href="#form-sale" data-effect="mfp-zoom-in">Оставить заявку</a>
+				<a class="mpp" href="#form-callback" data-effect="mfp-zoom-in">Оставить заявку</a>
 			</div>
 
 		</div>
@@ -494,9 +506,22 @@
 		</section>
 	</div>
 
-
-
-	<link rel="stylesheet" href="css/main.min.css">
+	<script>
+		// LOAD CSS
+		(function(){
+			var cssId = 'myCss';
+			if (!document.getElementById(cssId)){
+				var head  = document.getElementsByTagName('head')[0];
+				var link  = document.createElement('link');
+				link.id   = cssId;
+				link.rel  = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/main.min.css';
+				link.media = 'all';
+				head.appendChild(link);
+			}
+		})();
+	</script>
 	<script src="js/scripts.min.js"></script>
 
 	<script>
